@@ -1,0 +1,16 @@
+name: myweb.ci
+
+trigger:
+ - master
+   
+pool:
+		vmImage: 'ubuntu-latest'
+
+variables:
+	- name: instructor
+      value: Sam
+ 
+steps:
+	- script:
+  		echo "greetings? from your instructor [$(instructor)]"
+  		displayname: greetings
